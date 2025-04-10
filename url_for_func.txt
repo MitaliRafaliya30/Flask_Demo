@@ -1,0 +1,28 @@
+# The url_for() function is very useful for dynamically building a URL for a specific function
+
+# The function accepts the name of a function as first argument,
+ and one or more keyword arguments, each corresponding to the variable part of URL.
+
+ # most useful usecase of url_for()
+
+ # 1. Redirecting Users to a Different Page :
+ # When you want to redirect a user to a different page after they perform an action
+  (like submitting a form), you can use url_for() to generate the correct URL.
+
+  
+ # another useful usecases of url_for() 
+
+- Linking in Templates: Create links in HTML templates.
+- Query Parameters: Add query strings to URLs.
+- Static Files: Link to CSS, JS, images, etc.
+- Dynamic Routing: Handle dynamic URL parts.
+- URL Consistency: Keep URLs consistent across your app.
+- RESTful APIs: Build URLs for related API resources.
+
+
+Flask class has a redirect() function.
+When called, it returns a response object and redirects the user to another target location
+ with specified status code.
+
+Flask.redirect(location, statuscode, response)
+

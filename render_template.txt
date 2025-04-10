@@ -1,0 +1,28 @@
+# Instead of returning hardcode HTML from the function,
+ a HTML file can be rendered by the render_template() function.
+
+ example
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template(‘hello.html’)
+
+if __name__ == '__main__':
+   app.run(debug = True)
+
+# Flask will try to find the HTML file in the templates ,folder
+in the same folder in which this script is present.
+
+
+
+# from flask import request :
+# it is used to check the request is post or get
+
+# like,
+if request.method == "post":
+    pass
+else
+    pass

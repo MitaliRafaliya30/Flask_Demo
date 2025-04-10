@@ -1,0 +1,43 @@
+
+concept :
+1. we can build a URL dynamically,
+2. by adding variable parts to the rule parameter. marked as <variable-name>
+3. It is passed as a keyword argument to the function with which the rule is associated.
+
+example :
+the rule parameter of route() decorator contains <name> variable part attached to 
+URL ‘/hello’. Hence, if the http://localhost:5000/hello/MiraRafaliya is entered
+ as a URL in the browser, MiraRafaliya will be supplied to hello() function as argument.
+
+code :
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/hello/<name>')
+def hello_name(name):
+   return 'Hello' + name
+
+if __name__ == '__main__':
+   app.run(debug = True)
+
+Save the above script as hello.py and run it from Python shell. 
+Next, open the browser and enter URL http://localhost:5000/hello/MiraRafaliya.
+
+output :
+Hello MiraRafaliya!
+
+
+
+In addition to the default string variable part, rules can be constructed using the following converters −
+
+int
+ex : '/hello/<int:spid>'
+
+float
+ex : '/hello/<float:percentage>'
+
+path
+ex : '/hello/'
+
+
+
